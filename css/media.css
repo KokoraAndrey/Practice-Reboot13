@@ -1,0 +1,48 @@
+main,
+footer {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    body {
+        overflow: hidden;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        left: -350px;
+        top: 0;
+        z-index: 30;
+
+        width: 350px;
+        height: 100%;
+        padding: 39px 100px 100px;
+        flex-direction: column;
+        background-color: #5e3aee;
+
+        transition: transform 0.3s;
+    }
+
+    .menu__item {
+        padding-bottom: 50px;
+    }
+
+    .menu__link {
+        font-size: 30px;
+        line-height: 39px;
+        color: white;
+    }
+
+    .menu__link-active {
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    .header__content.header__content-open .menu {
+        transform: translateX(350px);
+    }
+}
